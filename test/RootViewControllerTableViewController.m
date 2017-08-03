@@ -38,7 +38,7 @@
     //电影
     MovieViewController *movieViewController = [[MovieViewController alloc]
                                                 initWithStyle:UITableViewStylePlain];
-    movieViewController.title = @"电影";
+    movieViewController.title = @"电影列表";
     [array addObject:movieViewController];
     
     

@@ -35,9 +35,14 @@
     //    [self.window makeKeyAndVisible];
     //
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     RootViewControllerTableViewController *root = [[RootViewControllerTableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.navController = [[UINavigationController alloc]initWithRootViewController:root];
     self.window.rootViewController = navController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

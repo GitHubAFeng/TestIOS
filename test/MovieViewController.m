@@ -21,6 +21,8 @@
 @synthesize movieList;
 @synthesize childController;
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,19 +43,8 @@
                       @"沉默的羔羊", @"非常嫌疑犯", @"七宗罪", @"指环王：双塔奇兵", @"阿甘正传",
                       @"惊魂记", @"美好人生", nil];
     
-    
-    NSMutableArray *arrayController = [[NSMutableArray alloc] init];
-    
-    
-    //电影
-    MovieDetailViewController *movieViewController = nil;
-    for (id item in array) {
-        movieViewController = [MovieDetailViewController new];
-        movieViewController.title = item;
-        [arrayController addObject:movieViewController];
-    }
-    
-    self.movieList = arrayController;
+
+    self.movieList = array;
     
 }
 
@@ -77,7 +68,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return [movieList count];
 }
 
 
@@ -99,12 +90,10 @@
     
     NSUInteger row = [indexPath row];
     
-//    NSString *movieTitle = [movieList objectAtIndex:row];
-//    //这里设置每一行显示的文本为所对应的View Controller的标题
-//    cell.textLabel.text = movieTitle;
+    NSString *movieTitle = [movieList objectAtIndex:row];
+    //这里设置每一行显示的文本为所对应的View Controller的标题
+    cell.textLabel.text = movieTitle;
 
-    UITableViewController *controller = [movieList objectAtIndex:row];
-    cell.textLabel.text = controller.title;
     
     //accessoryType就表示每行右边的图标
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
@@ -114,17 +103,37 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [tableView deselectRowAtIndexPath:indexPath
-                             animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath
+//                             animated:YES];
+    
+    
+    if(childController == nil){
+
+        childController = [MovieDetailViewController new];
+    }
+    
+    NSUInteger row = [indexPath row];
+    NSString *selectedMovie = [movieList objectAtIndex:row];
+    NSString *detailMessage = [[NSString alloc]
+                               initWithFormat:@"你选择了电影：%@.", selectedMovie];
+    childController.message = detailMessage;
+    childController.title = selectedMovie;
+    [self.navigationController pushViewController:childController animated:YES];
+    
+
+    
+    
 }
 
 
+/*
+//右边会出现一个感叹号的button 点击调用
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     
     if(childController == nil){
-        childController = [[MovieDetailViewController alloc]
-                           initWithNibName:@"MovieDetailViewController" bundle:nil];
-        
+        //        childController = [[MovieDetailViewController alloc]
+        //                           initWithNibName:@"MovieDetailViewController" bundle:nil];
+        childController = [MovieDetailViewController new];
     }
     
     NSUInteger row = [indexPath row];
@@ -138,6 +147,10 @@
 
     
 }
+*/
+
+
+
 
 
 

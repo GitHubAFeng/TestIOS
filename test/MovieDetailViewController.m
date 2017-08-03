@@ -18,18 +18,30 @@
 @synthesize message;
 @synthesize detailLabel;
 
+UILabel* label=nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-
+   self.view.backgroundColor = [UIColor whiteColor];
     
 }
 
 //viewWillAppear这个方法每次视图加载都会执行，而viewDidLoad方法只有在第一次加载时才会执行。
 - (void)viewWillAppear:(BOOL)animated{
+    
     detailLabel.text =  message;
+    
+//    [detailLabel setText:message];
+    
+    label=[[UILabel alloc]init];
+    label.frame=CGRectMake(100, 50, 200, 100);
+    label.text=message;
+    [self.view addSubview:label];
+    
+    NSLog(message);
+    
     [super viewWillAppear:animated];
 }
 
