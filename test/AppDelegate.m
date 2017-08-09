@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewControllerTableViewController.h"
+#import "HomeViewController.h"
+#import "MovieHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,27 +26,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //    RootViewControllerTableViewController *root = [[RootViewControllerTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    //
-    //    self.navController = [[UINavigationController alloc]initWithRootViewController:root];
-    ////    [self.window addSubview:navController.view];
-    //    self.window.rootViewController = root;
-    //    self.window.backgroundColor = [UIColor whiteColor];
-    //    [self.window makeKeyAndVisible];
-    //
+
+    //停留1s再进主界面
+    [NSThread sleepForTimeInterval:1.0];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    RootViewControllerTableViewController *root = [[RootViewControllerTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navController = [[UINavigationController alloc]initWithRootViewController:root];
-    self.window.rootViewController = navController;
+    
+
+    MovieHomeViewController *navroot = [[MovieHomeViewController alloc] initWithStyle:UITableViewStylePlain];
+    if(self.navController == nil){
+//        self.navController = [[UINavigationController alloc]init];
+        self.navController = [[UINavigationController alloc]initWithRootViewController:navroot];
+    }
+    [self.window addSubview:self.navController.view];
+
+    
+    //设置根启动页
+    HomeViewController *root = [HomeViewController new];
+    self.window.rootViewController = root;
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

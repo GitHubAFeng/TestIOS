@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewControllerTableViewController : UITableViewController
+@interface MovieHomeViewController : UITableViewController
 @property (strong, nonatomic)NSArray *controllerlist;
 
 @end

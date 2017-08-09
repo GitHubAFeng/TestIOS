@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface MovieDetailViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *detailLabel;

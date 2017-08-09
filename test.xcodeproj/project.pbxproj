@@ -15,9 +15,12 @@
 		3E368F161F2ED8F8004D3BD5 /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E368F151F2ED8F8004D3BD5 /* testTests.m */; };
 		3E368F211F2ED8F8004D3BD5 /* testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E368F201F2ED8F8004D3BD5 /* testUITests.m */; };
 		3E6914551F3087950049500D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3E6914541F3087950049500D /* README.md */; };
+		3E7D24A31F383D3100B0EA69 /* magicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D24A11F383D3100B0EA69 /* magicViewController.m */; };
+		3E7D24A41F383D3100B0EA69 /* magicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7D24A21F383D3100B0EA69 /* magicViewController.xib */; };
 		3EB7403B1F32B46B0011B7B6 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7403A1F32B46B0011B7B6 /* MovieViewController.m */; };
 		3EB740421F32B4CD0011B7B6 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB740401F32B4CD0011B7B6 /* MovieDetailViewController.m */; };
-		3ECE14F71F31C0E2006C2EAB /* RootViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE14F61F31C0E2006C2EAB /* RootViewControllerTableViewController.m */; };
+		3EBD38821F3AA83E006CB3D7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD38811F3AA83E006CB3D7 /* HomeViewController.m */; };
+		3ECE14F71F31C0E2006C2EAB /* MovieHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE14F61F31C0E2006C2EAB /* MovieHomeViewController.m */; };
 		443EBB27A437AA3E33B559EE /* libPods-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4A1193A0C39C8EB661360E /* libPods-testTests.a */; };
 		C408F23DFA5B2FB4D3AA1A92 /* libPods-testUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 822BDBDB5DBEF78ED9E4F242 /* libPods-testUITests.a */; };
 		F3B60B9113DC2AA472F54EDC /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D9CA6FE642B57022760F8F /* libPods-test.a */; };
@@ -58,12 +61,17 @@
 		3E368F201F2ED8F8004D3BD5 /* testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testUITests.m; sourceTree = "<group>"; };
 		3E368F221F2ED8F8004D3BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E6914541F3087950049500D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3E7D24A01F383D3100B0EA69 /* magicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = magicViewController.h; sourceTree = "<group>"; };
+		3E7D24A11F383D3100B0EA69 /* magicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = magicViewController.m; sourceTree = "<group>"; };
+		3E7D24A21F383D3100B0EA69 /* magicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = magicViewController.xib; sourceTree = "<group>"; };
 		3EB740391F32B46B0011B7B6 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		3EB7403A1F32B46B0011B7B6 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		3EB7403F1F32B4CD0011B7B6 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		3EB740401F32B4CD0011B7B6 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
-		3ECE14F51F31C0E2006C2EAB /* RootViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControllerTableViewController.h; sourceTree = "<group>"; };
-		3ECE14F61F31C0E2006C2EAB /* RootViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTableViewController.m; sourceTree = "<group>"; };
+		3EBD38801F3AA83E006CB3D7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3EBD38811F3AA83E006CB3D7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3ECE14F51F31C0E2006C2EAB /* MovieHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieHomeViewController.h; sourceTree = "<group>"; };
+		3ECE14F61F31C0E2006C2EAB /* MovieHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieHomeViewController.m; sourceTree = "<group>"; };
 		424220B2488970A8C5C0CD0B /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44823A7D0863A88F629C4EA5 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		4C4AAED953038056E3B908AC /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +135,8 @@
 		3E368EFA1F2ED8F7004D3BD5 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				3EBD387F1F3AA7E0006CB3D7 /* movie */,
+				3EBD387E1F3AA646006CB3D7 /* home */,
 				3ECE14F41F31C05E006C2EAB /* c */,
 				3E368EFE1F2ED8F7004D3BD5 /* AppDelegate.h */,
 				3E368EFF1F2ED8F7004D3BD5 /* AppDelegate.m */,
@@ -165,15 +175,34 @@
 			path = testUITests;
 			sourceTree = "<group>";
 		};
-		3ECE14F41F31C05E006C2EAB /* c */ = {
+		3EBD387E1F3AA646006CB3D7 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				3ECE14F51F31C0E2006C2EAB /* RootViewControllerTableViewController.h */,
-				3ECE14F61F31C0E2006C2EAB /* RootViewControllerTableViewController.m */,
+				3EBD38801F3AA83E006CB3D7 /* HomeViewController.h */,
+				3EBD38811F3AA83E006CB3D7 /* HomeViewController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		3EBD387F1F3AA7E0006CB3D7 /* movie */ = {
+			isa = PBXGroup;
+			children = (
+				3ECE14F51F31C0E2006C2EAB /* MovieHomeViewController.h */,
+				3ECE14F61F31C0E2006C2EAB /* MovieHomeViewController.m */,
 				3EB740391F32B46B0011B7B6 /* MovieViewController.h */,
 				3EB7403A1F32B46B0011B7B6 /* MovieViewController.m */,
 				3EB7403F1F32B4CD0011B7B6 /* MovieDetailViewController.h */,
 				3EB740401F32B4CD0011B7B6 /* MovieDetailViewController.m */,
+			);
+			name = movie;
+			sourceTree = "<group>";
+		};
+		3ECE14F41F31C05E006C2EAB /* c */ = {
+			isa = PBXGroup;
+			children = (
+				3E7D24A01F383D3100B0EA69 /* magicViewController.h */,
+				3E7D24A11F383D3100B0EA69 /* magicViewController.m */,
+				3E7D24A21F383D3100B0EA69 /* magicViewController.xib */,
 			);
 			name = c;
 			sourceTree = "<group>";
@@ -316,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7D24A41F383D3100B0EA69 /* magicViewController.xib in Resources */,
 				3E368F0B1F2ED8F8004D3BD5 /* LaunchScreen.storyboard in Resources */,
 				3E368F081F2ED8F8004D3BD5 /* Assets.xcassets in Resources */,
 				3E368F061F2ED8F8004D3BD5 /* Main.storyboard in Resources */,
@@ -486,7 +516,9 @@
 				3EB7403B1F32B46B0011B7B6 /* MovieViewController.m in Sources */,
 				3E6914551F3087950049500D /* README.md in Sources */,
 				3E368EFD1F2ED8F7004D3BD5 /* main.m in Sources */,
-				3ECE14F71F31C0E2006C2EAB /* RootViewControllerTableViewController.m in Sources */,
+				3E7D24A31F383D3100B0EA69 /* magicViewController.m in Sources */,
+				3ECE14F71F31C0E2006C2EAB /* MovieHomeViewController.m in Sources */,
+				3EBD38821F3AA83E006CB3D7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,17 +6,20 @@
 //  Copyright © 2017年 华信科技. All rights reserved.
 //
 
-#import "RootViewControllerTableViewController.h"
+#import "MovieHomeViewController.h"
 #import "MovieViewController.h"
+#import "AppDelegate.h"
 
-//@interface RootViewControllerTableViewController ()
-//
-//@end
 
-@implementation RootViewControllerTableViewController
+@interface MovieHomeViewController ()
+
+
+@end
+
+
+@implementation MovieHomeViewController
 
 @synthesize controllerlist;
-
 
 
 
@@ -29,8 +32,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
+
+
     self.title = @"分类";
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
@@ -104,15 +107,21 @@
     
     NSUInteger row = [indexPath row];
     UITableViewController *nextController = [self.controllerlist objectAtIndex:row];
+    
+    if(self.navigationController==nil){
+//        AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
+//        self.navigationController = appDelegate.navController;
+        NSLog(@"self.navigationController 为空");
+    }
+    
     [self.navigationController pushViewController:nextController animated:(YES)];
+    
     NSLog(@"进行点击");
     if(nextController==nil){
          NSLog(@"nextController 为空");
     }
     
-    if(self.navigationController==nil){
-        NSLog(@"self.navigationController 为空");
-    }
+
     
 }
 
